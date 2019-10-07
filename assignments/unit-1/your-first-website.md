@@ -18,10 +18,10 @@ Your website can be on anything you like that is "school appropriate." If you do
 
 You should note, however, that we'll be updating this page throughout the semester, so pick something you will want to work on for the next 8 weeks.   
 
-*Important:* These pages are public, so be sure to only write what you feel comfortable being public to the world.
+**Important:** These pages are public, so be sure to only write what you feel comfortable being public to the world.
 
 ### Requirements
-1. Major: Must have at _least_ 2 pages that are linked together using hyperlinks
+1. **[Major]** Must have at _least_ 2 pages (per teammate) that are linked together using hyperlinks
 1. Each page:
     1. Must have header with a menu that shows all pages
     1. Must have at least one image
@@ -31,6 +31,7 @@ You should note, however, that we'll be updating this page throughout the semest
     1. Must have at least one ordered or unordered list
     1. Must have at least 2 paragraphs of text
     1. Must have a footer with a copyright and any other relevant information
+        * Your name must appear in the footer somewhere.
     1. Must use semantic HTML
 
 ## GitHub Pages Steps
@@ -38,7 +39,7 @@ You should note, however, that we'll be updating this page throughout the semest
 1. Make sure your git repository is already on GitHub
 1. Visit <https://pages.github.com/>
 1. You should choose a _project site_ for this option. You are welcome to later convert this site to a _user site_.
-1. For this assignment, you _must_ choose "start from scratch" and _not_ "Choose a theme", as the idea here is to demonstrate your understanding of basic HTML. 
+1. For this assignment, you _must_ choose "start from scratch" and _not_ "Choose a theme", as the idea here is to demonstrate your understanding of the components learned in this course.
 1. Follow the instructions on the page.
 
 ## Git Requirements
@@ -48,7 +49,7 @@ Your git repository should have at _least_ 3 commits. Realistically, a site woul
 
 ## Grading and Rubric
 
-This assignment is due at the end of Unit 1. It is worth 100 points. 
+This assignment is due at the end of Unit 1. It is worth 100 points. Submit the GitHub Page URL **and** the GitHub repository URL via the assignment link in Sakai. 
 
 * 100/100 - Website and git requirements are met. Website is available on GitHub pages
 * 90/100 - Website is available on GitHub Pages and is missing only a couple non-major components
