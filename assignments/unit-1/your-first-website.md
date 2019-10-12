@@ -1,5 +1,6 @@
 # Assignment: Building and deploying your first website with git and GitHub
-
+~<https://classroom.github.com/g/CPAFB9rw>~  
+  
 Remember the syllabus contains useful links for this unit that may aid you  in the below tasks.
 
 ## Overview
@@ -7,9 +8,14 @@ For this assignment, you'll be:
  
 * Creating a website using basic HTML
 * Tracking your changes and source code with a version control system (vcs) called _git_
-* Deploying your git _repository_ to an online _remote_ called _GitHub_, which is a _Software as a Service_ (SaaS) 
+* Deploying your git _repository_ to an online _remote_ called _GitHub (Classroom)_, which is a _Software as a Service_ (SaaS) 
     * Arguably, GitHub is and/or a _Platform as a Service_ (PaaS)
 * Creating a project site for your repository using _GitHub Pages_, which is a PaaS
+
+~## Getting Started~
+
+~1. Join the assignment at <https://classroom.github.com/g/CPAFB9rw>~
+~1. Create your own team or join another student's team (with that student's permission.) Teams are limited to a size of 2.~
 
 ## Website
 
@@ -37,10 +43,11 @@ You should note, however, that we'll be updating this page throughout the semest
 ## GitHub Pages Steps
 
 1. Make sure your git repository is already on GitHub
+1. Ensure you have committed and pushed at least one file to the GitHub repository (remote) 
 1. Visit <https://pages.github.com/>
 1. You should choose a _project site_ for this option. You are welcome to later convert this site to a _user site_.
-1. For this assignment, you _must_ choose "start from scratch" and _not_ "Choose a theme", as the idea here is to demonstrate your understanding of the components learned in this course.
-1. Follow the instructions on the page.
+1. For this assignment, you _must_ choose "start from scratch" and _not_ "Choose a theme", as the idea here is to demonstrate your understanding of the components learned in this course
+1. Follow the instructions on the page
 
 ## Git Requirements
 

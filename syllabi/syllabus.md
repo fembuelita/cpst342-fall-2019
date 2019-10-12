@@ -9,9 +9,9 @@ Prerequisite: COMP 170 with C- or better
 **Required Text:**
 
 1. Sign in or create an account at <https://learn.zybooks.com>
-2. Enter zyBook code: _{{todo}}_
+2. Enter zyBook code: _LUCCPST342PostFall2019_
 3. Subscribe
-4. {{todo}}
+4. A subscription is $58. Students may begin subscribing on Oct 05, 2019 and the cutoff to subscribe is Dec 11, 2019. Subscriptions will last until Dec 28, 2019.
 
 **Meeting Times:**  Wednesdays 6p-9p.  
 **Meeting Location:** Online through Zoom. See Sakai for the link.  
@@ -139,6 +139,7 @@ Consult Sakai calendar and ZyBooks for detailed breakdowns and due dates. A gene
 * Assignment: Incorporating styling & Bootstrap into your site
 * Useful Links:
     * <https://getbootstrap.com>
+    * <https://www.bootstrapdash.com/bootstrap-4-tutorial/introduction/>
     * <https://medium.com/@carolskelly/bootstrap-4-the-tutorial-6cde836af7db>
     * <https://sass-lang.com/>
     * <https://nodejs.org/en/>
@@ -216,4 +217,4 @@ Failure to comply with any of the academic integrity policies will earn a grade 
 There is an addendum to this syllabus on Sakai that discusses further Academic Integrity, Privacy Policy, the Grade Scale, and a number of other legal and ethical obligations. Please be sure to read fully this addendum found under resources in Sakai.
 
 ##### This syllabus has been created in [markdown](https://daringfireball.net/projects/markdown/). 
-###### Last updated: October 6, 2019
+###### Last updated: October 12, 2019
