@@ -217,4 +217,3 @@ Failure to comply with any of the academic integrity policies will earn a grade 
 There is an addendum to this syllabus on Sakai that discusses further Academic Integrity, Privacy Policy, the Grade Scale, and a number of other legal and ethical obligations. Please be sure to read fully this addendum found under resources in Sakai.
 
 ##### This syllabus has been created in [markdown](https://daringfireball.net/projects/markdown/). 
-###### Last updated: October 12, 2019
