@@ -143,6 +143,7 @@ Consult Sakai calendar and ZyBooks for detailed breakdowns and due dates. A gene
     * <https://medium.com/@carolskelly/bootstrap-4-the-tutorial-6cde836af7db>
     * <https://sass-lang.com/>
     * <https://nodejs.org/en/>
+    * <https://bitsofco.de/a-look-at-css-resets-in-2018/>
     
 
 #### Unit 3
