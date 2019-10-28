@@ -1,5 +1,4 @@
 # Assignment: Building and deploying your first website with git and GitHub
-~<https://classroom.github.com/g/CPAFB9rw>~  
   
 Remember the syllabus contains useful links for this unit that may aid you  in the below tasks.
 
@@ -11,11 +10,6 @@ For this assignment, you'll be:
 * Deploying your git _repository_ to an online _remote_ called _GitHub (Classroom)_, which is a _Software as a Service_ (SaaS) 
     * Arguably, GitHub is and/or a _Platform as a Service_ (PaaS)
 * Creating a project site for your repository using _GitHub Pages_, which is a PaaS
-
-~## Getting Started~
-
-~1. Join the assignment at <https://classroom.github.com/g/CPAFB9rw>~
-~1. Create your own team or join another student's team (with that student's permission.) Teams are limited to a size of 2.~
 
 ## Website
 
