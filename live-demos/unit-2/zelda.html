@@ -4,107 +4,12 @@
     <meta charset="UTF-8">
     <title>Legend of Zelda - CPST342 Series</title>
 
-    <style>
-        /* http://meyerweb.com/eric/tools/css/reset/
-           v2.0 | 20110126
-           License: none (public domain)
-        */
-
-        html, body, div, span, applet, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        a, abbr, acronym, address, big, cite, code,
-        del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var,
-        b, u, i, center,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, embed,
-        figure, figcaption, footer, header, hgroup,
-        menu, nav, output, ruby, section, summary,
-        time, mark, audio, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-        }
-        /* HTML5 display-role reset for older browsers */
-        article, aside, details, figcaption, figure,
-        footer, header, hgroup, menu, nav, section {
-            display: block;
-        }
-        body {
-            line-height: 1;
-        }
-        ol, ul {
-            list-style: none;
-        }
-        blockquote, q {
-            quotes: none;
-        }
-        blockquote:before, blockquote:after,
-        q:before, q:after {
-            content: '';
-            content: none;
-        }
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-
-        /*
-        pixels
-         == vs ==
-        em
-         == vs ==
-        rem
-        */
-
-        html {
-            /*font-size: 16px;*/
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        header {
-            background:red;
-            /*font-size: 1.2em;*/
-            /*font-size: 16px;*/
-            font-size: 1.2rem;
-        }
-
-        /* specificity determines which rules are applied */
-        header nav {
-            background: gray;
-            padding: 30px;
-            /*font-size: 1.4em;*/
-            /*font-size: 18px;*/
-            font-size: 2rem;
-        }
-        a {
-            color: #fff;
-        }
-
-        /* make primary nav blue */
-        #primary-nav {
-            background:blue;
-        }
-
-        /* make secondary nav red */
-        #secondary-nav {
-            background:red;
-        }
-
-        nav,
-        .nav {
-            padding: 10px;
-        }
-    </style>
+    <!--
+    CSS:
+         1. inline (strongest)
+         2. embedded (middle)
+         3. linked stylesheet (weakest)
+    -->
 
     <!--
     CSS Selectors:
@@ -113,6 +18,8 @@
         * id
         * nested tags
     -->
+
+    <link href="style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -130,7 +37,7 @@
         </ul>
     </nav>
 
-    <nav id="secondary-nav" class="nav"><!-- secondary nav -->
+    <nav id="secondary-nav" class="nav" style="background: purple;"><!-- secondary nav -->
         <ul>
             <li>
                 <a href="hello-world.html">Home</a>
@@ -142,8 +49,70 @@
     </nav>
 </header>
 
+<style>
+    .special-typography {
+        margin-bottom: 20px;
 
-<canvas>Canvas</canvas>
+        font-size: 2rem;
+    }
+
+    article.special-typography {}
+
+    article {}
+
+    .special-typography-child {}
+
+    article .special-typography-child {
+        /* */
+    }
+
+    article > .special-typography-child {
+        /* */
+    }
+
+    ul.alt-colored li {
+        color: blue;
+    }
+    /*ul.alt-colored li:nth-child(odd) {*/
+    /*    color: red;*/
+    /*}*/
+    /*ul.alt-colored li:nth-child(even) {*/
+    /*    color: blue;*/
+    /*}*/
+    ul.alt-colored li:nth-child(5) {
+        color: red;
+    }
+</style>
+
+<ul class="alt-colored">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+
+<article class="special-typography">
+    <header class="special-typography-child">
+        <h2 class="special-typography-child">This is a header for the article</h2>
+    </header>
+
+    <section>
+        <p>Ruere a montes gravida duis turpis in euismod fermentum eu nisl convallis turpis leo ipsum montes senectus lorem condimentum elementum curabitur vestibulum vestibulum condimentum natoque ullamcorper condimentum non parturient. Magnis ut venenatis magna dictum dis class per fringilla id vitae nam facilisi nunc mi condimentum parturient nulla ullamcorper condimentum id interdum vestibulum commodo. Facilisis a nibh ad elementum quis per ultricies mi velit leo suspendisse donec nulla platea consectetur bibendum urna non. Condimentum a montes cum nunc et fermentum ullamcorper scelerisque felis a dui volutpat neque a habitant interdum ullamcorper nam suspendisse cubilia tortor enim sagittis arcu a.</p>
+
+        Random text
+    </section>
+
+    <footer>
+        &copy; 2019
+    </footer>
+</article>
+
+
+<blockquote>
+    Time not important, only life important.
+</blockquote>
 
 
 <p>
