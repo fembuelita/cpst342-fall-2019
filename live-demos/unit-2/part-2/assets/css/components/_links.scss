@@ -1,0 +1,31 @@
+a,
+a:visited {
+  color: color('rose');
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: color('red');
+    text-decoration: underline;
+  }
+}
+
+.bg-red,
+.bg-rose,
+.bg-purple,
+.bg-pink,
+.bg-gold {
+  a,
+  a:visited {
+    color: color('black');
+    text-decoration: underline;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: color('white');
+      text-decoration: none;
+    }
+  }
+}
+
