@@ -1,0 +1,49 @@
+small {
+  font-size: $font-size-sm;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-stack-cursive;
+}
+
+h1 {
+  font-size: $font-size-xl;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: $font-size-lg;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: $font-size-lg;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: $font-size-md;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: $font-size-md;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: $font-size-sm;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: map-get($spacers, md);
+}
+
+code {
+  font-family: $font-stack-sans-serif;
+  background-color: color('pink');
+  color: color('black');
+}

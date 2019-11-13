@@ -1,0 +1,562 @@
+.text-red {
+  color: #F0386B !important;
+}
+
+.bg-red {
+  background-color: #F0386B !important;
+}
+
+.border-red {
+  border: 1px solid #F0386B !important;
+}
+
+.border-t-red {
+  border-top: 1px solid #F0386B !important;
+}
+
+.border-r-red {
+  border-right: 1px solid #F0386B !important;
+}
+
+.border-b-red {
+  border-bottom: 1px solid #F0386B !important;
+}
+
+.border-l-red {
+  border-left: 1px solid #F0386B !important;
+}
+
+.text-rose {
+  color: #FF5376 !important;
+}
+
+.bg-rose {
+  background-color: #FF5376 !important;
+}
+
+.border-rose {
+  border: 1px solid #FF5376 !important;
+}
+
+.border-t-rose {
+  border-top: 1px solid #FF5376 !important;
+}
+
+.border-r-rose {
+  border-right: 1px solid #FF5376 !important;
+}
+
+.border-b-rose {
+  border-bottom: 1px solid #FF5376 !important;
+}
+
+.border-l-rose {
+  border-left: 1px solid #FF5376 !important;
+}
+
+.text-pink {
+  color: #F8C0C8 !important;
+}
+
+.bg-pink {
+  background-color: #F8C0C8 !important;
+}
+
+.border-pink {
+  border: 1px solid #F8C0C8 !important;
+}
+
+.border-t-pink {
+  border-top: 1px solid #F8C0C8 !important;
+}
+
+.border-r-pink {
+  border-right: 1px solid #F8C0C8 !important;
+}
+
+.border-b-pink {
+  border-bottom: 1px solid #F8C0C8 !important;
+}
+
+.border-l-pink {
+  border-left: 1px solid #F8C0C8 !important;
+}
+
+.text-purple {
+  color: #6B2D5c !important;
+}
+
+.bg-purple {
+  background-color: #6B2D5c !important;
+}
+
+.border-purple {
+  border: 1px solid #6B2D5c !important;
+}
+
+.border-t-purple {
+  border-top: 1px solid #6B2D5c !important;
+}
+
+.border-r-purple {
+  border-right: 1px solid #6B2D5c !important;
+}
+
+.border-b-purple {
+  border-bottom: 1px solid #6B2D5c !important;
+}
+
+.border-l-purple {
+  border-left: 1px solid #6B2D5c !important;
+}
+
+.text-gold {
+  color: #E2C290 !important;
+}
+
+.bg-gold {
+  background-color: #E2C290 !important;
+}
+
+.border-gold {
+  border: 1px solid #E2C290 !important;
+}
+
+.border-t-gold {
+  border-top: 1px solid #E2C290 !important;
+}
+
+.border-r-gold {
+  border-right: 1px solid #E2C290 !important;
+}
+
+.border-b-gold {
+  border-bottom: 1px solid #E2C290 !important;
+}
+
+.border-l-gold {
+  border-left: 1px solid #E2C290 !important;
+}
+
+.text-gray {
+  color: #999 !important;
+}
+
+.bg-gray {
+  background-color: #999 !important;
+}
+
+.border-gray {
+  border: 1px solid #999 !important;
+}
+
+.border-t-gray {
+  border-top: 1px solid #999 !important;
+}
+
+.border-r-gray {
+  border-right: 1px solid #999 !important;
+}
+
+.border-b-gray {
+  border-bottom: 1px solid #999 !important;
+}
+
+.border-l-gray {
+  border-left: 1px solid #999 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.border-white {
+  border: 1px solid #fff !important;
+}
+
+.border-t-white {
+  border-top: 1px solid #fff !important;
+}
+
+.border-r-white {
+  border-right: 1px solid #fff !important;
+}
+
+.border-b-white {
+  border-bottom: 1px solid #fff !important;
+}
+
+.border-l-white {
+  border-left: 1px solid #fff !important;
+}
+
+.text-black {
+  color: #1f2d3d !important;
+}
+
+.bg-black {
+  background-color: #1f2d3d !important;
+}
+
+.border-black {
+  border: 1px solid #1f2d3d !important;
+}
+
+.border-t-black {
+  border-top: 1px solid #1f2d3d !important;
+}
+
+.border-r-black {
+  border-right: 1px solid #1f2d3d !important;
+}
+
+.border-b-black {
+  border-bottom: 1px solid #1f2d3d !important;
+}
+
+.border-l-black {
+  border-left: 1px solid #1f2d3d !important;
+}
+
+:root {
+  --red: #F0386B;
+  --rose: #FF5376;
+  --pink: #F8C0C8;
+  --purple: #6B2D5c;
+  --gold: #E2C290;
+  --gray: #999;
+  --white: #fff;
+  --black: #1f2d3d;
+}
+
+.mt-xs {
+  margin-top: 0.8rem !important;
+}
+
+.pt-xs {
+  padding-top: 0.8rem !important;
+}
+
+.mr-xs {
+  margin-right: 0.8rem !important;
+}
+
+.pr-xs {
+  padding-right: 0.8rem !important;
+}
+
+.mb-xs {
+  margin-bottom: 0.8rem !important;
+}
+
+.pb-xs {
+  padding-bottom: 0.8rem !important;
+}
+
+.ml-xs {
+  margin-left: 0.8rem !important;
+}
+
+.pl-xs {
+  padding-left: 0.8rem !important;
+}
+
+.my-xs {
+  margin-top: 0.8rem !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.mx-xs {
+  margin-left: 0.8rem !important;
+  margin-right: 0.8rem !important;
+}
+
+.py-xs {
+  padding-top: 0.8rem !important;
+  padding-bottom: 0.8rem !important;
+}
+
+.px-xs {
+  padding-left: 0.8rem !important;
+  padding-right: 0.8rem !important;
+}
+
+.mt-sm {
+  margin-top: 0.9rem !important;
+}
+
+.pt-sm {
+  padding-top: 0.9rem !important;
+}
+
+.mr-sm {
+  margin-right: 0.9rem !important;
+}
+
+.pr-sm {
+  padding-right: 0.9rem !important;
+}
+
+.mb-sm {
+  margin-bottom: 0.9rem !important;
+}
+
+.pb-sm {
+  padding-bottom: 0.9rem !important;
+}
+
+.ml-sm {
+  margin-left: 0.9rem !important;
+}
+
+.pl-sm {
+  padding-left: 0.9rem !important;
+}
+
+.my-sm {
+  margin-top: 0.9rem !important;
+  margin-bottom: 0.9rem !important;
+}
+
+.mx-sm {
+  margin-left: 0.9rem !important;
+  margin-right: 0.9rem !important;
+}
+
+.py-sm {
+  padding-top: 0.9rem !important;
+  padding-bottom: 0.9rem !important;
+}
+
+.px-sm {
+  padding-left: 0.9rem !important;
+  padding-right: 0.9rem !important;
+}
+
+.mt-md {
+  margin-top: 1rem !important;
+}
+
+.pt-md {
+  padding-top: 1rem !important;
+}
+
+.mr-md {
+  margin-right: 1rem !important;
+}
+
+.pr-md {
+  padding-right: 1rem !important;
+}
+
+.mb-md {
+  margin-bottom: 1rem !important;
+}
+
+.pb-md {
+  padding-bottom: 1rem !important;
+}
+
+.ml-md {
+  margin-left: 1rem !important;
+}
+
+.pl-md {
+  padding-left: 1rem !important;
+}
+
+.my-md {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.mx-md {
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+
+.py-md {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.px-md {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.mt-lg {
+  margin-top: 1.4rem !important;
+}
+
+.pt-lg {
+  padding-top: 1.4rem !important;
+}
+
+.mr-lg {
+  margin-right: 1.4rem !important;
+}
+
+.pr-lg {
+  padding-right: 1.4rem !important;
+}
+
+.mb-lg {
+  margin-bottom: 1.4rem !important;
+}
+
+.pb-lg {
+  padding-bottom: 1.4rem !important;
+}
+
+.ml-lg {
+  margin-left: 1.4rem !important;
+}
+
+.pl-lg {
+  padding-left: 1.4rem !important;
+}
+
+.my-lg {
+  margin-top: 1.4rem !important;
+  margin-bottom: 1.4rem !important;
+}
+
+.mx-lg {
+  margin-left: 1.4rem !important;
+  margin-right: 1.4rem !important;
+}
+
+.py-lg {
+  padding-top: 1.4rem !important;
+  padding-bottom: 1.4rem !important;
+}
+
+.px-lg {
+  padding-left: 1.4rem !important;
+  padding-right: 1.4rem !important;
+}
+
+.mt-xl {
+  margin-top: 1.7rem !important;
+}
+
+.pt-xl {
+  padding-top: 1.7rem !important;
+}
+
+.mr-xl {
+  margin-right: 1.7rem !important;
+}
+
+.pr-xl {
+  padding-right: 1.7rem !important;
+}
+
+.mb-xl {
+  margin-bottom: 1.7rem !important;
+}
+
+.pb-xl {
+  padding-bottom: 1.7rem !important;
+}
+
+.ml-xl {
+  margin-left: 1.7rem !important;
+}
+
+.pl-xl {
+  padding-left: 1.7rem !important;
+}
+
+.my-xl {
+  margin-top: 1.7rem !important;
+  margin-bottom: 1.7rem !important;
+}
+
+.mx-xl {
+  margin-left: 1.7rem !important;
+  margin-right: 1.7rem !important;
+}
+
+.py-xl {
+  padding-top: 1.7rem !important;
+  padding-bottom: 1.7rem !important;
+}
+
+.px-xl {
+  padding-left: 1.7rem !important;
+  padding-right: 1.7rem !important;
+}
+
+html {
+  font-size: 16px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #1f2d3d;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+small {
+  font-size: 14.4px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "ZCOOL KuaiLe", cursive;
+}
+
+h1 {
+  font-size: 27.2px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 22.4px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 22.4px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 14.4px;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+code {
+  font-family: "Nanum Gothic", sans-serif;
+  background-color: #F8C0C8;
+  color: #1f2d3d;
+}
+
+/*# sourceMappingURL=style.css.map */
