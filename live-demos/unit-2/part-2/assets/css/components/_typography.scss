@@ -40,10 +40,14 @@ h6 {
 
 p {
   margin-bottom: map-get($spacers, md);
+  line-height: $font-size-base * 2;
 }
 
 code {
-  font-family: $font-stack-sans-serif;
-  background-color: color('pink');
-  color: color('black');
+  font-family: $font-stack-mono;
+  padding: $font-size-base * .25;
+  border-radius: 5px;
+  border: 1px solid color('gray');
+  background-color: color('light-gray');
+  color: color('red');
 }

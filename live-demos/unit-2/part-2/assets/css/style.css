@@ -1,29 +1,29 @@
 .text-red {
-  color: #F0386B !important;
+  color: #EF104F !important;
 }
 
 .bg-red {
-  background-color: #F0386B !important;
+  background-color: #EF104F !important;
 }
 
 .border-red {
-  border: 1px solid #F0386B !important;
+  border: 1px solid #EF104F !important;
 }
 
 .border-t-red {
-  border-top: 1px solid #F0386B !important;
+  border-top: 1px solid #EF104F !important;
 }
 
 .border-r-red {
-  border-right: 1px solid #F0386B !important;
+  border-right: 1px solid #EF104F !important;
 }
 
 .border-b-red {
-  border-bottom: 1px solid #F0386B !important;
+  border-bottom: 1px solid #EF104F !important;
 }
 
 .border-l-red {
-  border-left: 1px solid #F0386B !important;
+  border-left: 1px solid #EF104F !important;
 }
 
 .text-rose {
@@ -166,6 +166,34 @@
   border-left: 1px solid #999 !important;
 }
 
+.text-light-gray {
+  color: #d5d5d5 !important;
+}
+
+.bg-light-gray {
+  background-color: #d5d5d5 !important;
+}
+
+.border-light-gray {
+  border: 1px solid #d5d5d5 !important;
+}
+
+.border-t-light-gray {
+  border-top: 1px solid #d5d5d5 !important;
+}
+
+.border-r-light-gray {
+  border-right: 1px solid #d5d5d5 !important;
+}
+
+.border-b-light-gray {
+  border-bottom: 1px solid #d5d5d5 !important;
+}
+
+.border-l-light-gray {
+  border-left: 1px solid #d5d5d5 !important;
+}
+
 .text-white {
   color: #fff !important;
 }
@@ -223,12 +251,13 @@
 }
 
 :root {
-  --red: #F0386B;
+  --red: #EF104F;
   --rose: #FF5376;
   --pink: #F8C0C8;
   --purple: #6B2D5c;
   --gold: #E2C290;
   --gray: #999;
+  --light-gray: #d5d5d5;
   --white: #fff;
   --black: #1f2d3d;
 }
@@ -509,6 +538,14 @@ body {
   font-family: "Nanum Gothic", sans-serif;
 }
 
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+main .col-3 {
+  min-height: 75vh;
+}
+
 small {
   font-size: 14.4px;
 }
@@ -551,12 +588,16 @@ h6 {
 
 p {
   margin-bottom: 1rem;
+  line-height: 32px;
 }
 
 code {
-  font-family: "Nanum Gothic", sans-serif;
-  background-color: #F8C0C8;
-  color: #1f2d3d;
+  font-family: "Roboto Mono", monospace;
+  padding: 4px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  background-color: #d5d5d5;
+  color: #EF104F;
 }
 
 /*# sourceMappingURL=style.css.map */
