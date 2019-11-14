@@ -1,6 +1,10 @@
-a,
-a:visited {
+
+a {
   color: color('rose');
+  text-decoration: none;
+  &:visited {
+    @extend a;
+  }
 
   &:hover,
   &:active,

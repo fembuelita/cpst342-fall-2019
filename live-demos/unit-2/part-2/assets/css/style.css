@@ -250,6 +250,34 @@
   border-left: 1px solid #1f2d3d !important;
 }
 
+.text-blue {
+  color: #0000ff !important;
+}
+
+.bg-blue {
+  background-color: #0000ff !important;
+}
+
+.border-blue {
+  border: 1px solid #0000ff !important;
+}
+
+.border-t-blue {
+  border-top: 1px solid #0000ff !important;
+}
+
+.border-r-blue {
+  border-right: 1px solid #0000ff !important;
+}
+
+.border-b-blue {
+  border-bottom: 1px solid #0000ff !important;
+}
+
+.border-l-blue {
+  border-left: 1px solid #0000ff !important;
+}
+
 :root {
   --red: #EF104F;
   --rose: #FF5376;
@@ -260,6 +288,7 @@
   --light-gray: #d5d5d5;
   --white: #fff;
   --black: #1f2d3d;
+  --blue: #0000ff;
 }
 
 .mt-xs {
@@ -533,7 +562,7 @@ html, body {
 }
 
 body {
-  background: #fff;
+  background-color: #fff;
   color: #1f2d3d;
   font-family: "Nanum Gothic", sans-serif;
 }
@@ -542,18 +571,18 @@ body {
   box-sizing: border-box;
 }
 
+main {
+  background-color: #6B2D5c;
+}
 main .col-3 {
   min-height: 75vh;
 }
 
-a,
-a:visited {
+a, a:visited {
   color: #FF5376;
+  text-decoration: none;
 }
-a:hover, a:active, a:focus,
-a:visited:hover,
-a:visited:active,
-a:visited:focus {
+a:hover, a:active, a:focus {
   color: #EF104F;
   text-decoration: underline;
 }
