@@ -1,0 +1,15 @@
+.triangle-list {
+  list-style-type: none;
+  padding: 0;
+  line-height: $font-size-base * 1.5;
+
+  li {
+    position: relative;
+    padding-left: 1rem;
+    &::before {
+      @include css-triangle(color('white'), right);
+      left: 0;
+      top: 5px;
+    }
+  }
+}

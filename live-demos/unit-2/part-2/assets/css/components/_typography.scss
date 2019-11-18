@@ -1,0 +1,54 @@
+small {
+  font-size: $font-size-sm;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-stack-cursive;
+}
+
+h1 {
+  font-size: $font-size-xl;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: $font-size-lg;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: $font-size-lg;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: $font-size-md;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: $font-size-md;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: $font-size-sm;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: map-get($spacers, md);
+  line-height: $font-size-base * 2;
+}
+
+code {
+  font-family: $font-stack-mono;
+  padding: $font-size-base * .25;
+  border-radius: 5px;
+  border: 1px solid color('gray');
+  background-color: color('light-gray');
+  color: color('red');
+  white-space: pre;
+}
