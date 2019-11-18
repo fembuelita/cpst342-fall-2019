@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Hosting</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700|Yanone+Kaffeesatz|Droid+Serif:400,700,400italic&display=swap" rel="stylesheet">
+    <style>
+
+      body { 
+        font-family: 'Droid Serif'; 
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li, li p { line-height: 1.5em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        /*text-shadow: 0 0 20px #333;*/
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+      small {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 0.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+layout: true
+title: Web Hosting 101
+---
+class: center, middle, inverse
+# Web Hosting 101
+Infrastructure of the Web
+  
+
+<small>Elly Post, Loyola University Chicago</small>
+---
+## Outline
+
+* The file protocol
+* What is hosting?
+* HTTP intro
+* Simple servers
+* How do I use hosting?
+* Static site options
+* Security concerns
+
+---
+## The <code>file://</code> protocol
+
+* Up until now, you've accessed your web app files using the file protocol or by running a server implicitly through your IDE
+* This is a protocol built into your OS that allows basic reading of HTML files
+* The web does _not_ use the file protocol
+      * rather, it uses HTTP, which requires a server
+
+---
+## What is "Web Hosting"?
+
+* Paid service to store (host) files (applications) on a remote computer (server)
+* Various protocols exist to access the files
+  * Upload and download protocols
+* HTTP, HTTPS, FTP, FTPS, FTPES, SFTP, SCP, SSH, rsync, samba, etc.
+* Essentially, you rent a web server to _serve_ your web application to visitors
+
+---
+## Web Hosting Diagram
+
+<img src="https://www.abetterhostingservice.com/the-how-to-in-web-hosting.gif" style="width: 90%; display: block; margin: 10px auto; height: auto">
+
+<p>Source: <a href="https://www.abetterhostingservice.com/company.html">https://www.abetterhostingservice.com/company.html</a></p>
+
+* Look at `traceroute` for example path finding
+
+---
+## HTTP(S) Intro
+
+--
+* **H**yper **T**ext **T**ransfer **P**rotocol 
+--
+
+* Most common protocol for accessing web applications
+  * Common alternative: UDP (Good for acceptable packet loss)
+* Based on TCP/IP
+  * Tim Berners-Lee, once again
+* Powers what we think of as the web
+* Can send any data (text, media, etc.) between two machines provided both can understand HTTP
+* Has methods, head, a body, status codes, and uses packets
+   * We'll discuss these in more detail during API introductions
+* HTTPS uses TLS/SSL to encrypt the HTTP packet body
+
+---
+## Servers 101
+
+* Local host vs remote host
+* LAMP stack
+  * XAMP, MAMP, WAMP, Bitnami
+* Simple vs complex servers
+
+---
+## Simple Servers
+
+* Not intended for production sites
+--
+
+* Very insecure, unstable (scalability wise)
+--
+
+* Often not bundled with common services like database connections
+--
+
+* Almost always disabled to connecting to from the web
+--
+
+* Easy to set up a _simple_ server on your machine
+--
+
+* When running locally, you access through _localhost_
+  * http://localhost
+  * http://::1
+  * http://127.0.0.1 (there's no place like 127.0.0.1)
+--
+
+* Default ports:
+  * HTTP: 80 or 8080
+  * HTTPS: 443
+  * FTP/FTPES/FTPS: 21
+  * SFTP/SSH/SCP: 22 or 2222
+
+---
+## Simple Servers
+
+* Python, node, PHP, and many other langauges all offer simple servers
+* Most Macs and Linux machines come with at least one of those languages/tools pre-installed
+* Consult the docs for any given language on how to create a simple server
+* Python2 Example:
+```bash
+python -m SimpleHTTPServer 8080
+```
+* Python3 Example:
+```bash
+python3 -m http.server
+```
+
+---
+## Remote Hosting (Web Hosting)
+
+* Access through IP address or domain
+  * Domain gets converted to IP address, see earlier diagram
+* Many options exist for web hosting
+  * Important to choose the right product
+  * What needs do you have?
+      * database, scalability, security, analytics, pricing, server software & OS
+      * upload &amp; connection options
+          * ssh, ftp, etc.
+
+---
+## Sample Web Hosts
+
+### Recommended 
+
+* AWS S3/EC2, etc
+* Pantheon (WordPress & Drupal only)
+* Digital Ocean
+* A2 Hosting
+* Liquid Web
+
+### Not Recommended
+
+* GoDaddy/BlueHost
+* DreamHost
+* 1&amp;1
+* Wix
+* Weebly
+
+---
+## SaaS, PaaS, IaaS
+
+* SaaS
+  * Software as a Service
+  * Example: Google Docs, Facebook, GMail, GitHub
+  * Basically: most web apps
+--
+
+* PaaS
+  * Platform as a Service
+  * Example: Heroku, GitHub
+--
+
+* IaaS
+  * Infrastructure as a Service
+  * Example: AWS, Google Drive, Dropbox
+--
+
+* Learn more <a href="https://venturebeat.com/2011/11/14/cloud-iaas-paas-saas/" target="_blank">https://venturebeat.com/2011/11/14/cloud-iaas-paas-saas/</a>
+
+
+---
+## Amazon Web Services (AWS)
+
+* Every programmer should know about AWS
+* AWS powers a huge portion of the web
+* Services ranging from simple storage services (S3), to content delivery networks (CDN - CloudFront), to virtual private servers (VPS - EC2), and more.
+* Netflix is powered by AWS, for instance
+* Free 1 year trial, worth exploring
+
+---
+## Static Site Options
+
+* Very easy to host a static site
+  * what makes a site static, vs dynamic
+* S3 or Heroku are great options for _static_ sites
+  * Heroku is _PaaS_
+  * S3 is _PaaS_ but AWS itself is _IaaS_
+* Heroku is also excellent for dynamic sites
+  * S3 primary function is static asset storage/delivery
+
+---
+## Deploying with Git
+
+* Deploying
+  * to make live your website by sending it to your web host
+  * Available to the world through HTTP(S)
+* Heroku uses git to deploy applications
+* Other automated services 
+  * TravisCI
+  * Jenkins
+  * BitBucket Pipelines
+* Alternatives exists, such as (S)FTP
+
+---
+## Git security
+
+* Do not ever store passwords or other sensitive data such as credentials in git
+* Bad practice to track those files, especially if they are stored in public repository or published to web
+* Use _.env_ files and _.gitignore_
+
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        highlightStyle: 'monokai',
+        navigation: {"scroll": false}
+      });
+    </script>
+  </body>
+</html>

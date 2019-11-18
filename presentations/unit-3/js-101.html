@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript 101</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700|Yanone+Kaffeesatz|Droid+Serif:400,700,400italic&display=swap" rel="stylesheet">
+    <style>
+
+      body { 
+        font-family: 'Droid Serif'; 
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+      }
+      li, li p { line-height: 1.5em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        /*text-shadow: 0 0 20px #333;*/
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+      small {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 0.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+layout: true
+title: JavaScript 101
+---
+class: center, middle, inverse
+# JavaScript 101
+The scripting language of the web
+  
+
+<small>Elly Post, Loyola University Chicago</small>
+---
+## Outline
+* What is it and why would I use it?
+* History
+* Standards &amp; ECMAScript 5-8
+* How do I use it? Understanding running code in a browser
+* Basic Syntax
+
+---
+## What is JavaScript and why would I use it?
+
+JavaScript (JS) is...  
+
+* a _client-side_ scripting language that is fast and powerful
+--
+
+* compatible with every major browser
+--
+
+* used by 95% of websites [[source]](https://w3techs.com/technologies/details/cp-javascript/all/all)
+--
+
+* used by so many websites, it's hard to find sources on how many use it versus which JavaScript _libraries_ are more common
+--
+
+* not a general purpose language like C, Python, ruby, etc.
+--
+
+* procedural, object-oriented, and/or functional.
+--
+
+* capable of running as a _server-side_ language
+--
+
+* powering millions of HTML5 applications, plugins, etc.
+--
+
+* powering this slideshow
+--
+
+* an event-driven language (vs. threaded language)
+--
+
+* capable of manipulating the DOM
+--
+
+* capable of manipulating storage &amp; cookies
+--
+
+* duck-typed
+
+
+---
+
+## History
+
+* Built in 10-days in 1995 by Brendan Eich (Netscape) in partnership with Sun
+* Originally called Mocha for 4 months, then LiveScript for 3 months
+* By December 1995 it was named JavaScript as a marketing call, which was owned by Sun
+* Aside from being related by name and original licensing, the two share no other commonalities
+
+
+---
+
+## Standards &amp; ECMAScript
+
+* JS is an implementation of ECMAScript
+--
+
+* ECMA is an international standards organization
+--
+
+* JS was presented at ECMA in 96-97 for other browsers to use
+  * JScript (Microsoft) spin off
+  * ActionScript (Microsoft, Macromedia) also implemented ECMAScript
+  * ECMAScript history: <https://en.wikipedia.org/wiki/ECMAScript#History>
+--
+
+* Current version is 10, though version 6 is the official support standard across major browsers.
+  * Most modern browsers support most features of EC7 with some limitations. IE11 has no support for EC7.
+  * Learn more at < href="http://kangax.github.io/compat-table/es6/">http://kangax.github.io/compat-table/es6/
+* Each browser implements JS through its own engine
+  * See <https://en.wikipedia.org/wiki/ECMAScript#Conformance>
+---
+
+## How Do I Use JS?
+
+* JS is run natively in your browser
+* Chrome Web Inspector brief demo
+  * The console is like a REPL
+* More common to save scripts and execute often than write once, gone-forever
+* These scripts can be injected dynamically into any web application, often websites
+* As a server
+
+---
+
+## Basic Syntax
+
+```javascript
+let x = 5;
+console.log(x * 3); // prints 15 to the console
+x = "World";
+console.log(x * 3); // NaN
+console.log(x + " World!"); // prints "Hello World!"
+```
+
+--
+  
+You can run this in a browser in the chrome inspector (demo). 
+
+--
+  
+..Or you can embed it into a webpage
+
+```html
+<html>
+...
+<script>
+let x = 5;
+console.log(x * 3); // prints 15 to the console
+x = "World";
+console.log(x * 3); // NaN
+console.log(x + " World!"); // prints "Hello World!"
+</script>
+...
+</html>
+```
+
+---
+
+## Basic Syntax
+  
+..or save it to file and link to it
+
+```javascript
+// my-script.js file
+let x = 5;
+console.log(x * 3); // prints 15 to the console
+x = "World";
+console.log(x * 3); // NaN
+console.log(x + " World!"); // prints "Hello World!"
+```
+
+```html
+<html>
+...
+<script src="my-script.js"></script>
+</html>
+```
+
+---
+
+## Sources & Additional Reading
+  
+* <https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript> 
+* <https://auth0.com/blog/a-brief-history-of-javascript/>
+* <https://en.wikipedia.org/wiki/ECMAScript>
+* <https://en.wikipedia.org/wiki/Ecma_International>
+* <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode>
+* <https://tvernon.tech/blog/javascript-strict-mode>
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        highlightStyle: 'monokai',
+        navigation: {"scroll": false}
+      });
+    </script>
+  </body>
+</html>
