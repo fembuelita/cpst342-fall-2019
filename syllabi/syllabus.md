@@ -155,6 +155,7 @@ Consult Sakai calendar and ZyBooks for detailed breakdowns and due dates. A gene
 * Assignment: Converting your website into a web application
 * Useful Links:
     * <https://nodejs.org/en/>
+    * <https://www.npmjs.com/>
     * <https://gulpjs.com/>
     * <https://momentjs.com/>
     * <https://javascript.info/>
