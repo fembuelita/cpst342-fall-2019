@@ -7,7 +7,19 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-grid.min.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
         <style>
+            .triangle-list {
+                -webkit-transition: all 1000ms linear;
+                -moz-transition: all 1000ms linear;
+                -ms-transition: all 1000ms linear;
+                -o-transition: all 1000ms linear;
+                transition: all 1000ms linear;
+            }
 
+            .hidden {
+                height: 0;
+                /*overflow: hidden;*/
+                opacity: 0;
+            }
         </style>
     </head>
     <body>
@@ -42,11 +54,12 @@
 
                 </section>
 
-                <aside class="col-3 bg-gold py-xs">
-                    <ul class="triangle-list ">
+                <aside class="col-3 bg-gold py-xs" id="gold-sidebar">
+                    <a href="#" id="triangle-list-toggle">Toggle the list</a>
+                    <ul class="triangle-list hidden" id="triangle-list">
                         <li>This list uses CSS triangles instead of discs.</li>
                         <li>That's pretty nifty, huh?</li>
-                        <li>You can use CSS arrows for all sorts of stuff./li>
+                        <li>You can use CSS arrows for all sorts of stuff.</li>
                         <li>We're using a SCSS mix-in for this, which makes life easy!</li>
                         <li>If you're not using SCSS or you want a custom one, you can save some time by <a href="http://www.cssarrowplease.com/" target="_blank">using a generator</a>.</li>
                     </ul>
@@ -54,6 +67,28 @@
             </div>
 
         </main>
-        </main>
+
+        <script>
+            document.getElementById("triangle-list-toggle")
+              .addEventListener("click", handleTriListToggleClick);
+
+            function handleTriListToggleClick(e) {
+                e.preventDefault();
+
+                // console.log("handleTriListToggleClick was triggered");
+                let triList = document.getElementById("triangle-list");
+                triList.classList.toggle("hidden");
+
+                // console.log(triList);
+                // debugger;
+
+                // triList.style({
+                //   opacity: 1,
+                //   height: auto
+                // });
+                // triList.style.opacity = 1;
+                // triList.style.height = "auto";
+            }
+        </script>
     </body>
 </html>
