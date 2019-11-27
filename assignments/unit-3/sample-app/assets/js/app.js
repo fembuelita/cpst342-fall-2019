@@ -1,3 +1,5 @@
+let moment = require('moment');
+
 document.addEventListener('DOMContentLoaded', e => {
   console.log(`Loaded document at ${moment().format()}`);
 
