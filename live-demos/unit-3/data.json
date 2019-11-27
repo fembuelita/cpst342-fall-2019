@@ -1,0 +1,26 @@
+{
+  "creatures": [
+    {
+      "id": 1,
+      "name": "Elly Post",
+      "age": 31,
+      "hobby_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Sebastian",
+      "age": 5,
+      "hobby_id": 2
+    }
+  ],
+  "hobbies": [
+    {
+      "id": 1,
+      "description": "Not recording the same lecture 4 times :)"
+    },
+    {
+      "id": 2,
+      "description": "Being cute and a troublemaker"
+    }
+  ]
+}

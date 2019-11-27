@@ -1,9 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Unit 3</title>
+    <meta charset="UTF-8">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        table {
+            border: 1px solid #333;
+            border-collapse: collapse;
+        }
+
+        thead tr {
+            background: #0000FF;
+            color: #fff;
+        }
+        thead tr th {
+            border-color: #fff;
+        }
+
+        tr  {
+            border: 1px dotted #999;
+            border-collapse: collapse;
+        }
+
+        table tr:nth-child(even) {
+            background: #efefef;
+            color: #000;
+        }
+
+        tr th,
+        tr td {
+            border-right: 1px solid #999;
+            padding: .5rem;
+        }
+        tr td:last-child {
+            border-right: 0;
+        }
+    </style>
 </head>
 <body>
-<script src="js-intro.js"></script>
+<!--    <h1>Pre-created H1 tag in the HTML file</h1>-->
+
+    <span id="loading-msg">Loading our application. Please wait.</span>
+
+    <table id="creatures-table" class="hidden">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Hobby</th>
+            </tr>
+        </thead>
+        <tbody id="creatures-data"></tbody>
+    </table>
+
+    <table id="hobbies-table" class="hidden">
+        <thead>
+            <tr>
+                <th>Hobby ID</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="hobbies-data"></tbody>
+    </table>
+
+    <script src="js-intro.js"></script>
 </body>
 </html>
