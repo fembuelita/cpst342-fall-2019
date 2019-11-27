@@ -92,6 +92,7 @@ Infrastructure of the Web
 * How do I use hosting?
 * Static site options
 * Security concerns
+* Docker & Containerized Development
 
 ---
 ## The <code>file://</code> protocol
@@ -132,8 +133,7 @@ Infrastructure of the Web
   * Tim Berners-Lee, once again
 * Powers what we think of as the web
 * Can send any data (text, media, etc.) between two machines provided both can understand HTTP
-* Has methods, head, a body, status codes, and uses packets
-   * We'll discuss these in more detail during API introductions
+* Has methods, a head, a body, status codes, and uses packets
 * HTTPS uses TLS/SSL to encrypt the HTTP packet body
 
 ---
@@ -250,6 +250,7 @@ python3 -m http.server
 * Services ranging from simple storage services (S3), to content delivery networks (CDN - CloudFront), to virtual private servers (VPS - EC2), and more.
 * Netflix is powered by AWS, for instance
 * Free 1 year trial, worth exploring
+* Google has competing network called Google Cloud Services
 
 ---
 ## Static Site Options
@@ -261,6 +262,7 @@ python3 -m http.server
   * S3 is _PaaS_ but AWS itself is _IaaS_
 * Heroku is also excellent for dynamic sites
   * S3 primary function is static asset storage/delivery
+* GitHub pages for very simple static sites
 
 ---
 ## Deploying with Git
@@ -281,6 +283,15 @@ python3 -m http.server
 * Do not ever store passwords or other sensitive data such as credentials in git
 * Bad practice to track those files, especially if they are stored in public repository or published to web
 * Use _.env_ files and _.gitignore_
+
+---
+## Containers
+
+* Additionally Docker is an excellent choice to _containerize_ your application
+* Like the JVM it's built to work on any machine where Docker can be installed
+* Good for development and production
+* Kind of complex to get started, but there are options to simplify it
+* [DockerHub](https://hub.docker.com/), [Lando](https://lando.dev/), etc
 
 
 

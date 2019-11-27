@@ -1,0 +1,72 @@
+// font families
+$font-stack-mono: 'Roboto Mono', monospace;
+$font-stack-cursive: 'ZCOOL KuaiLe', cursive;
+$font-stack-sans-serif: 'Nanum Gothic', sans-serif;
+
+// font size
+$font-size-base: 16px;
+$font-size-xs: $font-size-base * .8;
+$font-size-sm: $font-size-base * .9;
+$font-size-md: $font-size-base;
+$font-size-lg: $font-size-base * 1.4;
+$font-size-xl: $font-size-base * 1.7;
+
+// spacers
+$base-spacer-size: 1rem;
+$spacers: (
+        xs: $base-spacer-size * .8,
+        sm: $base-spacer-size * .9,
+        md: $base-spacer-size,
+        lg: $base-spacer-size * 1.4,
+        xl: $base-spacer-size * 1.7,
+);
+
+// margins and paddings
+@each $size_key, $size_val in $spacers {
+  @each $side_key, $side_val in (t: top, r: right, b: bottom, l: left) {
+    .m#{$side_key}-#{$size_key} {
+      margin-#{$side_val}: $size_val !important;
+    }
+
+    .p#{$side_key}-#{$size_key} {
+      padding-#{$side_val}: $size_val !important;
+    }
+  }
+  .my-#{$size_key} {
+    margin-top: $size_val !important;
+    margin-bottom: $size_val !important;
+  }
+  .mx-#{$size_key} {
+    margin-left: $size_val !important;
+    margin-right: $size_val !important;
+  }
+  .py-#{$size_key} {
+    padding-top: $size_val !important;
+    padding-bottom: $size_val !important;
+  }
+  .px-#{$size_key} {
+    padding-left: $size_val !important;
+    padding-right: $size_val !important;
+  }
+}
+
+// core html tags
+html {
+  font-size: $font-size-base;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: color('white');
+  color: color('black');
+  font-family: $font-stack-sans-serif;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
