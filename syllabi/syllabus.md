@@ -151,7 +151,7 @@ Consult Sakai calendar and ZyBooks for detailed breakdowns and due dates. A gene
 
 * Textbook Readings: Chapters 7, 8, 9
 * Languages Learned: Client-side JavaScript (various versions)
-* Tools Learned: Gulp, MomentJS, NPM
+* Tools Learned: Gulp, MomentJS, NPM, Webpack
 * Assignment: Converting your website into a web application
 * Useful Links:
     * <https://nodejs.org/en/>
@@ -159,6 +159,7 @@ Consult Sakai calendar and ZyBooks for detailed breakdowns and due dates. A gene
     * <https://gulpjs.com/>
     * <https://momentjs.com/>
     * <https://javascript.info/>
+    * <https://webpack.js.org/guides/getting-started/>
     
 #### Unit 4
 

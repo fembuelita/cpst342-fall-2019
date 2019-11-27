@@ -221,8 +221,77 @@ Additionally, the page should either refresh afterwards (`window.location.reload
 
 Save your changes, commit, and push.
 
-### Oh my gosh is this assignment over yet?
-Not quite, dear student! You're nearly there, though. You are done with all the programming, now it's a matter of finishing your build tool and replacing some of the hard coded entries. I'm still writing the details for this part of the assignment, but you'll be replacing your MomentJS import and SASS build to use NPM and Gulp to accomplish this in a modern approach. I'll post to Piazza when this portion is ready!
+### Prepping the app for build
+Now that you have the core pieces for your application written, we need to write some JavaScript to process the build portion. Just like you've done with Java or C in the past where you have compiled your source code, we are going to do a similar process with JavaScript that concatenates and minifies our source code. We can also run these through transpiler tools like SASS and Babel to provide support for legacy browsers and autoprefix CSS for browsers with different CSS rule support.  
+
+Inside this assignment you'll see a directory `sample-app`. Copy the following files from the root directory into your assignment's root directory: `.gitignore`, `package.json`, `gulpfile.js`, and `webpack.config.js`.
+
+We'll talk about each of these files in lecture. Hopefully you've done some reading in the syllabus recommended reading links and these files sound familiar. If not, you can learn more about each of these by following the links in the syllabus for this unit. 
+
+For simplicity, I'm providing fully written build files for you. All you need to do is customize the source files for each tool--gulp and webpack--to tell it where to find and output your core stylesheet and core JS file. Once you update it, be sure to also update your HTML files to point to the new `build` or `dist`(ribution) directories. See `sample-app/index.html` for examples. 
+
+Next, remove your MomentJS file you manually downloaded and remove the reference to it from your HTML files so you no longer have something like `<script src="moment.js"></script>` in your HTML file. We'll _bundle_ all our needed JS files into a single file as part of our _build_ process so we link only a single JS file, like you can see in `sample-app/index.html`.
+
+Now, update your `app.js` file to `require()` moment like you see in `sample-app/assets/js/app.js`. This will, during your build process, automatically include the moment.js source files in your JS bundle. 
+
+All of your application code should now be updated and you simply need to build the app. Save your changes, commit, and push to GitHub.
+
+### Building the application
+Using the command line, `cd` into your root directory of your assignment. Then, run `npm install` to automatically install the _dependencies_ in `package.json`. You may see a few warnings about peer requirements and possibly some outdated packages or deprecation warnings, but you should see a success message when you're done about how many packages were installed. The output should look _something_ like:
+
+```bash
+$ npm install
+
+> fsevents@1.2.9 install /Users/elly-luc/luc/cpst342/2019-fall/instructor/assignments/unit-3/sample-app/node_modules/fsevents
+> node install
+
+node-pre-gyp WARN Using request for node-pre-gyp https download
+[fsevents] Success: "/Users/elly-luc/luc/cpst342/2019-fall/instructor/assignments/unit-3/sample-app/node_modules/fsevents/lib/binding/Release/node-v64-darwin-x64/fse.node" is installed via remote
+
+> node-sass@4.13.0 install /Users/elly-luc/luc/cpst342/2019-fall/instructor/assignments/unit-3/sample-app/node_modules/node-sass
+> node scripts/install.js
+
+Cached binary found at /Users/elly-luc/.npm/node-sass/4.13.0/darwin-x64-64_binding.node
+
+> node-sass@4.13.0 postinstall /Users/elly-luc/luc/cpst342/2019-fall/instructor/assignments/unit-3/sample-app/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /Users/elly-luc/luc/cpst342/2019-fall/instructor/assignments/unit-3/sample-app/node_modules/node-sass/vendor/darwin-x64-64/binding.node
+Testing binary
+Binary is fine
+npm WARN cpst342-unit-3@1.0.0 No description
+npm WARN cpst342-unit-3@1.0.0 No repository field.
+npm WARN cpst342-unit-3@1.0.0 No license field.
+
+added 784 packages from 452 contributors and audited 15668 packages in 9.443s
+found 0 vulnerabilities
+```
+
+You only have to install once, so we're done with this now. You'll be able to see all of the installed dependencies in `./node_modules`.
+
+Next we need to run the build command. You should do this everytime you update your application. If you find this process tedious, you can install watchers to your `gulpfile.js` such that every time you change a SCSS or JS file it automatically rebuilds.
+
+To run the build, from your root directory, run `gulp`. If you just wish to build the CSS you can run `gulp css` and if you just wish to build the JS you can run `gulp js`. We're using Gulp as our task runner here and web use Webpack to bundle our JS. Technically Webpack can also do our CSS for us, but my personal preference is to use Gulp for this as I find it more straight forward. You can use whichever you prefer! There are, of course, other build tools as well, but these two are both very commonly used.
+
+After running `gulp` from the command line, you'll see output like:
+
+```bash
+$ gulp
+[13:13:20] Using gulpfile ~/luc/cpst342/2019-fall/instructor/assignments/unit-3/sample-app/gulpfile.js
+[13:13:20] Starting 'default'...
+[13:13:20] Starting 'css'...
+[13:13:20] Starting 'js'...
+[13:13:20] Finished 'css' after 407 ms
+(node:11461) [DEP0097] DeprecationWarning: Using a domain property in MakeCallback is deprecated. Use the async_context variant of MakeCallback or the AsyncResource class instead.
+[13:13:22] Finished 'js' after 1.7 s
+[13:13:22] Finished 'default' after 1.7 s
+```
+
+You may or may not see the deprecation warning above. You can disregard that for this project. If you get errors during either of these processes, you need to check your paths you updated in the prep step earlier. Read carefully the error messages for details and see the lecture for guidance.
+
+Finally, you should inspect your page to ensure it's loading the JS bundle file and CSS file from the build directory. These files have been minified and the CSS has been _autoprefixed_ to improve load time and add browser support, respectively. If you're using JS newer than ES6 you'll want to update your webpack config to use Babel to transpile your code to ES5 or ES6. That's not discussed in this assignment, but there are a lot of great resources you can find online.
+
+If your page looks like it did before the build process, you don't see errors in the console, and your JS is still functioning, then you're good to go!
 
 ## Checking your work
 
@@ -240,6 +309,7 @@ Let's verify you meet the requirements:
 1. The user has the ability to flush the tracking storage via a button on that page
 1. A README.md or README.txt is supplied that notes anything requested in this document and lists team member names
 1. MomentJS is imported using NPM 
-1. JS and SASS are both built/compiled using Gulp
+1. JS and SASS are both built/compiled using Gulp and Webpack
 1. A single JS file is produced and imported to replace `momentjs` and `app.js`
 1. (Optional 10 points extra credit) connect Bootstrap to your build process and have a single stylesheet to import as well as a single JS file for everything, instead of 1 CSS + 1 JS for bootstrap & 1 CSS + 1 JS for your custom app portion.
+1. Cite your sources in your README and JS/HTML/CSS source files.
