@@ -72,7 +72,7 @@ So, what does `$('.alert').alert();` do? The `$` is a shortcut for writing `jQue
 
 In effect, our code does nothing, _yet_! It will allow us to do interesting things later on, though.
 
-Finally, wrap the JS code you just wrote in a function called `myAppOnload` and after that write an event handler for listening to the `document` to finish loading. Call the function when the event is completed. I'm providing the finished code for that here, but going forward you'll need to do these yourself. (Curious to know when to use `window.onload` vs `document.onload`? Check out this helpful answer <https://stackoverflow.com/a/588048>.)
+Finally, wrap the JS code you just wrote in a function called `myAppOnload` and after that write an event handler for listening to the `document` to finish loading. Call the function when the event is completed. I'm providing the finished code for that here, but going forward you'll need to do these yourself. (Curious to know when to use `load` vs `DOMContentLoaded`? Check out this helpful answer <https://stackoverflow.com/a/588048>.)
 
 ##### Variant A
 
@@ -81,7 +81,7 @@ Finally, wrap the JS code you just wrote in a function called `myAppOnload` and 
 function myAppOnload(e) {
   $('.alert').alert();
 }
-document.addEventListener('onload', myAppOnload); // notice we do NOT call myAppOnload, we only pass the name of it. The event listener will call it (by using () after the name) when the event is triggered
+document.addEventListener('DOMContentLoaded', myAppOnload); // notice we do NOT call myAppOnload, we only pass the name of it. The event listener will call it (by using () after the name) when the event is triggered
 ```
 
 ##### Variant B With Old Syntax
@@ -89,7 +89,7 @@ document.addEventListener('onload', myAppOnload); // notice we do NOT call myApp
 This does the same as variant A, but uses a closure. This is the most common approach.
 
 ```js
-document.addEventListener('onload', function(e) {
+document.addEventListener('DOMContentLoaded', function(e) {
   $('.alert').alert();
 });
 ```
@@ -99,7 +99,7 @@ document.addEventListener('onload', function(e) {
 This does the same as variants a & b, but uses a closure with arrow syntax. This will not run on Internet Explorer with transpiling using Babel or something similar.
 
 ```js
-document.addEventListener('onload', e => {
+document.addEventListener('DOMContentLoaded', e => {
   $('.alert').alert();
 });
 ```
@@ -155,7 +155,7 @@ So...what's an AJAX and how does one use it? AJAX is an acronym for "Asynchronou
 After verifying the form submission is valid, instead of displaying the success alert, you should first send the form to the _API endpoint_ (the destination URL). You can use the properties of your `<form>` tag itself to determine the method and action. Example:
 
 ```js
-const form = document.getElementById("#contact");
+const form = document.getElementById("contact");
 const method = form.getAttribute("method");
 const action = form.getAttribute("action");
 ```
@@ -163,7 +163,7 @@ const action = form.getAttribute("action");
 When you're ready to send the request, which you can [find all the details by reading fetch's documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), you can use the properties above like:
 
 ```js
-const form = document.getElementById("#contact");
+const form = document.getElementById("contact");
 form.addEventListener('submit', e => {
     e.preventDefault();
     const method = form.getAttribute("method");
@@ -172,7 +172,7 @@ form.addEventListener('submit', e => {
         return await fetch(action, {
             method, // shorthand for method: method
             mode: 'cors', // make sure you are running through HTTP:// and not file://
-            data: new FormData(form) // see <https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData>
+            body: new FormData(form) // see <https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData>
         });
     };
     
