@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async function(){
   await fetch('./data.json')
     .then(async response => {
       const database = await response.json();
-      // debugger;
+      debugger;
 
       hideLoadingMsg();
       printCreatures(database.creatures, database.hobbies);
