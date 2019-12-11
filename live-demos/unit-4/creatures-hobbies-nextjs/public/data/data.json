@@ -1,0 +1,48 @@
+{
+  "creatures": [
+    {
+      "id": 1,
+      "name": "Elly Post",
+      "age": 31,
+      "hobbies": [1,3,4]
+    },
+    {
+      "id": 2,
+      "name": "Sebastian",
+      "age": 5,
+      "hobbies": [2,3,4,6]
+    },
+    {
+      "id": 2,
+      "name": "Santa",
+      "age": 1749,
+      "hobbies": [3,5,6]
+    }
+  ],
+  "hobbies": [
+    {
+      "id": 1,
+      "description": "Not recording the same lecture 4 times :)"
+    },
+    {
+      "id": 2,
+      "description": "Being cute and a troublemaker"
+    },
+    {
+      "id": 3,
+      "description": "Eating"
+    },
+    {
+      "id": 4,
+      "description": "Sleeping"
+    },
+    {
+      "id": 5,
+      "description": "Flying"
+    },
+    {
+      "id": 6,
+      "description": "Being Mysterious"
+    }
+  ]
+}
